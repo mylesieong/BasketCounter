@@ -21,12 +21,16 @@
 
         <!--reset button-->
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:onClick="reset"
-            android:text="@string/reset_button_text" />
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:text="@string/reset_button_text"
+            android:layout_margin="8dp"
+            android:textAllCaps="true"/>
         <!--team Name-->
         <TextView
             android:id="@+id/team_name_upper"
@@ -35,6 +39,12 @@
             android:layout_centerHorizontal="true"
             android:layout_margin="8dp"
             android:text="@string/team_name_upper"
+            android:textColor="@color/white"
+            android:background="@color/blue"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
             android:textSize="24sp" />
         <!--scores-->
         <TextView
@@ -45,12 +55,13 @@
             android:layout_centerHorizontal="true"
             android:layout_margin="8dp"
             android:text="@string/score_init_value"
-            android:textSize="80sp" />
+            android:textSize="80sp"
+            android:textStyle="italic" />
 
         <!-- detailed scores board-->
         <LinearLayout
             android:id="@+id/scores_layout_upper"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/score_upper"
             android:layout_centerHorizontal="true"
@@ -58,32 +69,40 @@
             <!-- fouls-->
             <TextView
                 android:id="@+id/foul_time_upper"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/score_init_value" />
+                android:layout_weight="1"
+                android:text="@string/score_init_value"
+                android:textAlignment="center" />
             <!-- 1pts-->
             <TextView
                 android:id="@+id/score_1pt_upper"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/score_init_value" />
+                android:layout_weight="1"
+                android:text="@string/score_init_value"
+                android:textAlignment="center" />
             <!-- 2pts-->
             <TextView
                 android:id="@+id/score_2pt_upper"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/score_init_value" />
+                android:layout_weight="1"
+                android:text="@string/score_init_value"
+                android:textAlignment="center" />
             <!-- 3pts-->
             <TextView
                 android:id="@+id/score_3pt_upper"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/score_init_value" />
+                android:text="@string/score_init_value"
+                android:textAlignment="center"
+                android:layout_weight="1"/>
         </LinearLayout>
 
         <!--Score button board-->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/scores_layout_upper"
             android:layout_centerHorizontal="true"
@@ -91,29 +110,41 @@
             <!--foul button-->
             <Button
                 android:id="@+id/button_foul_upper"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_weight="1"
+                android:background="@color/navy"
                 android:onClick="foulActionUpper"
                 android:text="@string/foul_button_text" />
             <!-- 1pts-->
             <Button
                 android:id="@+id/button_1pt_upper"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_weight="1"
+                android:background="@color/navy"
                 android:onClick="scoreOneUpper"
                 android:text="@string/button_1pt_text" />
             <!-- 2pts-->
             <Button
                 android:id="@+id/button_2pt_upper"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_weight="1"
+                android:background="@color/navy"
                 android:onClick="scoreTwoUpper"
                 android:text="@string/button_2pt_text" />
             <!-- 3pts-->
             <Button
                 android:id="@+id/button_3pt_upper"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_weight="1"
+                android:background="@color/navy"
                 android:onClick="scoreThreeUpper"
                 android:text="@string/button_3pt_text" />
 
@@ -141,6 +172,12 @@
             android:layout_centerHorizontal="true"
             android:layout_margin="8dp"
             android:text="@string/team_name_lower"
+            android:textColor="@color/white"
+            android:background="@color/red"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
             android:textSize="24sp" />
         <!--scores-->
         <TextView
@@ -150,13 +187,14 @@
             android:layout_below="@id/team_name_lower"
             android:layout_centerHorizontal="true"
             android:layout_margin="8dp"
+            android:textStyle="italic"
             android:text="@string/score_init_value"
             android:textSize="80sp" />
 
         <!-- detailed scores board-->
         <LinearLayout
             android:id="@+id/scores_layout_lower"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/score_lower"
             android:layout_centerHorizontal="true"
@@ -164,32 +202,40 @@
             <!-- fouls-->
             <TextView
                 android:id="@+id/foul_time_lower"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/score_init_value" />
+                android:layout_weight="1"
+                android:text="@string/score_init_value"
+                android:textAlignment="center" />
             <!-- 1pts-->
             <TextView
                 android:id="@+id/score_1pt_lower"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/score_init_value" />
+                android:layout_weight="1"
+                android:text="@string/score_init_value"
+                android:textAlignment="center" />
             <!-- 2pts-->
             <TextView
                 android:id="@+id/score_2pt_lower"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/score_init_value" />
+                android:layout_weight="1"
+                android:text="@string/score_init_value"
+                android:textAlignment="center" />
             <!-- 3pts-->
             <TextView
                 android:id="@+id/score_3pt_lower"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/score_init_value" />
+                android:layout_weight="1"
+                android:text="@string/score_init_value"
+                android:textAlignment="center" />
         </LinearLayout>
 
         <!--Score button board-->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/scores_layout_lower"
             android:layout_centerHorizontal="true"
@@ -197,30 +243,42 @@
             <!--foul button-->
             <Button
                 android:id="@+id/button_foul_lower"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:onClick="foulActionLower"
+                android:layout_weight="1"
+                android:layout_margin="16dp"
+                android:background="@color/orange"
                 android:text="@string/foul_button_text" />
             <!-- 1pts-->
             <Button
                 android:id="@+id/button_1pt_lower"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:onClick="scoreOneLower"
+                android:layout_weight="1"
+                android:layout_margin="16dp"
+                android:background="@color/orange"
                 android:text="@string/button_1pt_text" />
             <!-- 2pts-->
             <Button
                 android:id="@+id/button_2pt_lower"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:onClick="scoreTwoLower"
+                android:layout_weight="1"
+                android:layout_margin="16dp"
+                android:background="@color/orange"
                 android:text="@string/button_2pt_text" />
             <!-- 3pts-->
             <Button
                 android:id="@+id/button_3pt_lower"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:onClick="scoreThreeLower"
+                android:layout_weight="1"
+                android:layout_margin="16dp"
+                android:background="@color/orange"
                 android:text="@string/button_3pt_text" />
 
         </LinearLayout>
