@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Basket Counter</string>
+    <string name="team_name_upper">Wolf</string>
+    <string name="reset_button_text">Reset</string>
+    <string name="upper_court_background">Team court background picture</string>
+    <string name="score_init_value">0</string>
+    <string name="team_name_lower">Tiger</string>
+    <string name="foul_button_text">Foul</string>
+    <string name="button_1pt_text">1-pt</string>
+    <string name="button_2pt_text">2-pt</string>
+    <string name="button_3pt_text">3-pt</string>
 </resources>
